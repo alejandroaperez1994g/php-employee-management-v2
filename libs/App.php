@@ -1,5 +1,6 @@
 <?php
 
+require_once (CONTROLLERS . "/FailureController.php");
 
 class App
 {
@@ -18,22 +19,23 @@ class App
             require_once($fileController);
             $controller = new MainController();
             $controller->render();
+            return false;
         }
 
         $class = ucfirst($url[0]);
         $fileController = CONTROLLERS . '/' . $class . 'Controller.php';
         $classController = $class . 'Controller';
+        echo $class;
 
 
         if (file_exists($fileController)) {
             require_once($fileController);
             $controller = new $classController;
-            // $controller->render();
-            echo $fileController;
-            echo "<br>";
-            var_dump($controller);
-            echo "<br>";
-            echo $classController;
+            $controller->render();
+
+        } else {
+            $error = new FailureController();
+            $error->render();
         }
     }
 }

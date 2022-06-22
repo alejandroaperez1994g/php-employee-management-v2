@@ -1,6 +1,6 @@
 <?php
 
-class Board extends Controller
+class BoardController extends Controller
 {
 
     function __construct()
