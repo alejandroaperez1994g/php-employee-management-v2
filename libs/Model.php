@@ -1,10 +1,12 @@
 <?php
 
-class Model {
+
+
+class Model
+{
 
     function __construct()
     {
         echo "Model.php";
     }
-
 }

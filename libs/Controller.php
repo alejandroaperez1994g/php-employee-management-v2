@@ -1,10 +1,13 @@
 <?php
 
-class Controller {
 
-    function __construct()
+class Controller
+{
+
+
+    public function __construct()
     {
-        echo "Controller.php";
+        echo "<p>Controller.php</p>";
+        $this->view = new View();
     }
-
 }
