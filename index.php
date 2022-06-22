@@ -1,14 +1,14 @@
-RewriteEngine On
+<?php
+require_once ("config/baseConstants.php");
+require_once ("config/constants.php");
+require_once ("config/db.php");
 
-# This will allow to make requests to files that aren't .php
-# -----------------------------------------------------------
-# Not a directory
-RewriteCond %{REQUEST_FILENAME} !-d
-# Not a file
-RewriteCond %{REQUEST_FILENAME} !-f
-# Not a another thing
-RewriteCond %{REQUEST_FILENAME} !-l
-# -----------------------------------------------------------
+require_once (LIBS . "/Controller.php");
+require_once (LIBS . "/App.php");
+require_once (LIBS . "/Model");
+require_once (LIBS . "/View.php");
 
-# When you enter an URL, first will load index.php
-RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
+
+
+
+$app = new App();

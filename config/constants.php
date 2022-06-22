@@ -17,3 +17,5 @@ define('CSS', BASE_URL . '/public/assets/css');
 
 //JS
 define('JS', BASE_URL . '/public/assets/js');
+
+echo LIBS;
