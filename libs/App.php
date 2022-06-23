@@ -1,6 +1,6 @@
 <?php
 
-require_once (CONTROLLERS . "/FailureController.php");
+require_once(CONTROLLERS . "/FailureController.php");
 
 class App
 {
@@ -31,8 +31,14 @@ class App
         if (file_exists($fileController)) {
             require_once($fileController);
             $controller = new $classController;
+            $controller->loadModel($class);
             $controller->render();
 
+            $nParam = sizeof($url);
+
+            if ($nParam ==  2) {
+                $controller->{$url[1] . $class}();
+            }
         } else {
             $error = new FailureController();
             $error->render();
