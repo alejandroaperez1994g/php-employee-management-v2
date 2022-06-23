@@ -1,6 +1,6 @@
 <?php
 define('HOST', 'localhost');
-define('DB', 'mvc_advanced');
+define('DB', 'employee-v2');
 define('USER', 'root');
-define('PASSWORD', 'Churr373&A71');
+define('PASSWORD', '');
 define('CHARSET', 'utf8mb4');
