@@ -11,5 +11,13 @@
 <body>
     <h1>This is the Dashboard</h1>
 </body>
+<?php
+if (isset($this->employees)) {
+    echo "<pre>";
+    print_r($this->employees);
+    echo "</pre>";
+}
+
+?>
 
 </html>

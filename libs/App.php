@@ -32,7 +32,6 @@ class App
             require_once($fileController);
             $controller = new $classController;
             $controller->loadModel($class);
-            $controller->render();
 
             $nParam = sizeof($url);
 

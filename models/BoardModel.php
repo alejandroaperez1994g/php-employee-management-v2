@@ -19,10 +19,9 @@ class BoardModel extends Model
             while ($row = $query->fetch()) {
                 $item = new Employees();
 
-
                 $item->id = $row['employee_id'];
                 $item->name = $row['name'];
-                $item->name = $row['last_name'];
+                $item->last_name = $row['last_name'];
                 $item->email = $row['email'];
                 $item->gender = $row['gender'];
                 $item->age = $row['age'];
@@ -32,12 +31,10 @@ class BoardModel extends Model
                 $item->postalCode = $row['postalCode'];
                 $item->phoneNumber = $row['phoneNumber'];
 
-                echo "<pre>";
-                print_r($item);
-                echo "</pre>";
 
                 array_push($items, $item);
             }
+
             return $items;
         } catch (PDOException $e) {
             echo $e;

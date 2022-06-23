@@ -29,13 +29,13 @@ class BoardController extends Controller
 
     function consultBoard()
     {
-
         $content = $this->model->getAllEmployees();
+        $this->view->employees = $content;
+        $this->view->render('board/index');
     }
 
     function consultBoardById()
     {
-
         echo "consultar tabla de trabajadores y pillar 1\n";
         $this->model->getEmployeeById();
     }
