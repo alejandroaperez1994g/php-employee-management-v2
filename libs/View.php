@@ -6,7 +6,6 @@ class View
 
     function __construct()
     {
-        echo "View.php";
     }
 
     function render($name)
