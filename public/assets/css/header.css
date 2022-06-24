@@ -1,0 +1,45 @@
+@import url(background.css);
+@import url(colors.css);
+@import url(reset.css);
+@import url(fonts.css);
+@import url(buttons.css);
+header {
+  flex: 0.5;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 3rem 2rem;
+  background-color: var(--light-blue);
+}
+
+.nav__menu {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--medium);
+}
+.nav-link {
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+  margin: 1rem 0;
+  color: black;
+  transition: all 0.2s ease-in-out;
+}
+.nav-link:hover {
+  background-color: var(--normal-blue);
+  transform: scale(1.05);
+  border-radius: 0.5rem;
+}
+
+.nav__logo {
+  font-size: var(--normal);
+  text-align: center;
+}
+
+.nav__logo h3 {
+  padding: 1rem 0;
+}

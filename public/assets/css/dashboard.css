@@ -1,0 +1,112 @@
+@import url(background.css);
+@import url(colors.css);
+@import url(reset.css);
+@import url(fonts.css);
+@import url(buttons.css);
+@import url(header.css);
+
+body {
+  display: flex;
+  justify-content: center !important;
+}
+
+/*CONTAINER PARENT*/
+.table-employee {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  border-spacing: 0;
+}
+/*CONTAINER TABLE*/
+.table-content {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  padding: 5rem;
+  background-color: rgba(255, 255, 255, 0.565);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/*SCROLLBAR*/
+.table-content::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+.table-content::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
+}
+
+.table-content::-webkit-scrollbar-thumb {
+  background-color: var(--dark-blue);
+}
+/*TABLE TOP*/
+.table-employee__top {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+.table-employee__top > h2 {
+  font-size: var(--x-large);
+}
+
+/*TABLE CREATE*/
+.table-employee > input {
+  width: 100%;
+}
+.table-employee__create-input {
+  width: 100%;
+  font-size: var(--normal);
+  border: none;
+  outline: none;
+}
+
+/*TABLE BOTTOM*/
+.table-employee__bottom {
+  border-radius: 0.5rem;
+  border: none;
+}
+
+/*TABLE HEADER*/
+.table-employee__header {
+  font-size: var(--normal);
+  text-align: left;
+  background-color: aliceblue;
+  line-height: 2rem;
+}
+.table-employee__header-col {
+  padding: 0.5rem 1rem;
+}
+/*TABLE EMPLOYEE ROW*/
+.table-employee__body-row {
+  background-color: var(--normal-blue);
+  line-height: 2rem;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.table-employee__body-row:hover {
+  background-color: var(--light-blue);
+}
+/*TABLE EMPLOYEE COL*/
+.table-employee__body-col {
+  padding: 0.5rem 1rem;
+}
+
+/*DELETE BTN*/
+.employee_delete {
+  border: none;
+  background-color: transparent;
+  font-size: var(--medium);
+  cursor: pointer;
+}
+
+/*CREATE BTN*/
+.dashboard__create-btn {
+  font-size: 1.4rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

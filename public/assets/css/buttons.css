@@ -1,0 +1,31 @@
+@import url(colors.css);
+@import url(fonts.css);
+.primary-btn {
+  background-color: var(--light-green);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.4rem;
+  color: white;
+  font-size: var(--medium);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.primary-btn:hover {
+  background-color: var(--dark-green);
+  transform: scale(1.05);
+}
+
+.secondary-btn {
+  background-color: black;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.4rem;
+  color: white;
+  font-size: var(--medium);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.secondary-btn:hover {
+  background-color: var(--dark-blue);
+  transform: scale(1.05);
+}
