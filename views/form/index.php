@@ -10,6 +10,15 @@
 
 <body>
     <h1>This is the Form</h1>
+
+    <?php
+    if (isset($this->employees)) {
+        echo "<pre>";
+        print_r($this->employees);
+        echo "</pre>";
+    }
+
+    ?>
 </body>
 
 </html>

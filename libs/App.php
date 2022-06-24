@@ -25,7 +25,6 @@ class App
         $class = ucfirst($url[0]);
         $fileController = CONTROLLERS . '/' . $class . 'Controller.php';
         $classController = $class . 'Controller';
-        // echo $class;
 
 
         if (file_exists($fileController)) {
@@ -36,7 +35,17 @@ class App
             $nParam = sizeof($url);
 
             if ($nParam ==  2) {
-                $controller->{$url[1] . $class}();
+                if ($controller->{$url[1] . $class}() === false) {
+                    $error = new FailureController();
+                    $error->render();
+                }
+            } else if ($nParam > 2) {
+                $parameter = [];
+                array_push($parameter, $url[2]);
+                if ($controller->{$url[1] . $class}($parameter) === false) {
+                    $error = new FailureController();
+                    $error->render();
+                }
             }
         } else {
             $error = new FailureController();

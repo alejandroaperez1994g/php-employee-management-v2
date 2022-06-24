@@ -16,6 +16,10 @@ if (isset($this->employees)) {
     echo "<pre>";
     print_r($this->employees);
     echo "</pre>";
+
+    if (isset($message)) {
+        echo $message;
+    }
 }
 
 ?>
