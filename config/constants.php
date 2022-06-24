@@ -16,7 +16,10 @@ define("MODELS", BASE_PATH . '/models');
 define("ENTITIES", MODELS . '/entities');
 
 //CSS
-define('CSS', BASE_URL . '/public/assets/css');
+define('CSS', BASE_PATH . '/public/assets/css');
 
 //JS
-define('JS', BASE_URL . '/public/assets/js');
+define('JS', BASE_PATH . '/public/assets/js');
+
+//HTML
+define('HTML', BASE_PATH . '/public/assets/html');
