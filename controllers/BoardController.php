@@ -6,7 +6,7 @@ class BoardController extends Controller
     function __construct()
     {
         parent::__construct();
-        echo "<p>Dashboard.php</p>";
+        echo "<p>BoardControler.php</p>";
     }
 
     public function __call($method, $arguments)

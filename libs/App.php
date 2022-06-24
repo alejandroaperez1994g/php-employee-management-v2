@@ -25,7 +25,7 @@ class App
         $class = ucfirst($url[0]);
         $fileController = CONTROLLERS . '/' . $class . 'Controller.php';
         $classController = $class . 'Controller';
-        echo $class;
+        // echo $class;
 
 
         if (file_exists($fileController)) {
