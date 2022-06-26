@@ -6,18 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <!-- <script src="../assets/js/index.js" defer></script> -->
-    <!-- <script src="../assets/js/checkLogin.js" defer></script> -->
-    <!-- <link rel="stylesheet" href="<?php CSS . '/dashboard.css'?>"> -->
     <link rel="stylesheet" href="../public/assets/css/dashboard.css">
-    <link rel="stylesheet" href="./public/assets/css/dashboard.css">
+    <link rel="stylesheet" href="../../public/assets/css/dashboard.css">
 </head>
-
-    <?php
-
-    // echo CSS . '/dashboard.css';
-
-    ?>
 
 <body>
 
@@ -51,12 +42,12 @@
                 <!-- TABLE BODY -->
                 <tbody class="table-employee__body" id="tableBody">
                     <?php
-                    if(isset($this->employees)){
+                    if (isset($this->employees)) {
                         $data = $this->employees;
-                    
+
                         foreach ($data as $values) {
-                            echo 
-                                "<tr class='table-employee__body-row' data-id='{$values->id}'>
+                            echo
+                            "<tr class='table-employee__body-row' data-id='{$values->id}'>
                                     <td class='table-employee__body-col'>{$values->name}</td>
                                     <td class='table-employee__body-col'>{$values->last_name}</td>
                                     <td class='table-employee__body-col'>{$values->email}</td>
