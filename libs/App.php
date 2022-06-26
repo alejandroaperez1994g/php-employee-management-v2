@@ -18,7 +18,15 @@ class App
             $fileController = CONTROLLERS . '/' . 'MainController.php';
             require_once($fileController);
             $controller = new MainController();
-            $controller->render();
+            if ($url[1] == "auth") {
+                if ($controller->auth() === false) {
+                    $error = new FailureController();
+                    $error->render();
+                }
+            } else {
+
+                $controller->render();
+            }
             return false;
         }
 

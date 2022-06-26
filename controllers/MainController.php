@@ -12,4 +12,8 @@ class MainController extends Controller
 
         $this->view->render('login/index');
     }
+    function auth()
+    {
+        $this->model->autenticate();
+    }
 }

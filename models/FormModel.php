@@ -7,11 +7,11 @@ class FormModel extends Model
         parent::__construct();
     }
 
-    public function insertForm()
+    public function insert()
     {
         echo "insert nuevo trabajador";
     }
-    public function updateForm()
+    public function update()
     {
         echo "update nuevo trabajador";
     }
