@@ -18,13 +18,12 @@
             </div>
             <!-- NAV MENU -->
             <div class="nav__menu">
-                <a class="nav-link" href="<?php echo BASE_URL . 'board/consult'?>">🏠 Dashboard</a>
-                <a class="nav-link" href="<?php echo BASE_URL . 'form'?>">👥 Employee</a>
+                <a class="nav-link" href="<?php echo BASE_URL . 'board/consult' ?>">🏠 Dashboard</a>
+                <a class="nav-link" href="<?php echo BASE_URL . 'form/render' ?>">👥 Employee</a>
             </div>
             <!-- NAV LOGOUT -->
             <div class="nav__logout">
-                <a class="navbar-brand nav-link" href="<?php echo BASE_URL?>"><button
-                        class="nav__logout-btn primary-btn">Logout</button></a>
+                <a class="navbar-brand nav-link" href="<?php echo BASE_URL ?>"><button class="nav__logout-btn primary-btn">Logout</button></a>
             </div>
         </nav>
     </header>
