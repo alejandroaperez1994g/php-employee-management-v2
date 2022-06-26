@@ -47,8 +47,10 @@
 
                         foreach ($data as $values) {
                             echo
-                            "<tr class='table-employee__body-row' data-id='{$values->id}'>
-                                    <td class='table-employee__body-col'>{$values->name}</td>
+                            "
+
+                            <tr class='table-employee__body-row' data-id='{$values->id}'>
+                                    <td class='table-employee__body-col'> <a href='../form/render/{$values->id}' >{$values->name}</a>  </td>
                                     <td class='table-employee__body-col'>{$values->last_name}</td>
                                     <td class='table-employee__body-col'>{$values->email}</td>
                                     <td class='table-employee__body-col'>{$values->age}</td>
@@ -58,7 +60,8 @@
                                     <td class='table-employee__body-col'>{$values->postalCode}</td>
                                     <td class='table-employee__body-col'>{$values->phoneNumber}</td>
                                     <td class='table-employee__body-col'><a href=" . BASE_URL . 'board/delete/' . $values->id .  "><button id='employeeDelete' class='employee_delete' data-id='4'>❌</button></a></td>
-                                </tr>";
+                                </tr>
+                            ";
                         }
                     }
 

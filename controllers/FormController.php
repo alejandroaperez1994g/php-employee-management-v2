@@ -7,7 +7,7 @@ class FormController extends Controller
         parent::__construct();
     }
 
-    public function render()
+    public function renderForm()
     {
         $this->view->render('form/index');
     }
