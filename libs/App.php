@@ -14,19 +14,14 @@ class App
 
 
 
-        if (empty($url[0]) || $url[0] == "login") {
+        if (empty($url[0])) {
             $fileController = CONTROLLERS . '/' . 'MainController.php';
             require_once($fileController);
             $controller = new MainController();
-            if ($url[1] == "auth") {
-                if ($controller->auth() === false) {
-                    $error = new FailureController();
-                    $error->render();
-                }
-            } else {
 
-                $controller->render();
-            }
+
+            $controller->render();
+
             return false;
         }
 

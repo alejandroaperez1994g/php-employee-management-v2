@@ -27,6 +27,7 @@
     <main class="employee-update">
         <!-- REQUIRE FROM HEADER.PHP COMPONENTE REUTILIZABLE EN EMPLOYEE/DASHBOARD -->
         <?php include(HTML . '/header.php') ?>
+
         <section class="employee-form">
             <form action="./library/employeeController.php" method='POST'>
                 <!-- FIELD 1  -->
@@ -34,12 +35,12 @@
                     <!-- NAME -->
                     <label for="nameUpdate" class="employee-update__label">
                         <span>Name:</span>
-                        <input type="text" class="employee-update__input" name="nameUpdate" id="nameUpdate" value="<?= $_SESSION['nameUpdate'] ?>" />
+                        <input type="text" class="employee-update__input" name="nameUpdate" id="nameUpdate" value="<?php if (isset($_SESSION)) echo $_SESSION['nameUpdate'] ?>" />
                     </label>
                     <!-- LASTNAME -->
                     <label for="lastNameUpdate" class="employee-update__label">
                         <span>Last name:</span>
-                        <input type="text" class="employee-update__input" name="lastNameUpdate" id="lastNameUpdate" value="<?= $_SESSION['lastNameUpdate'] ?>" />
+                        <input type="text" class="employee-update__input" name="lastNameUpdate" id="lastNameUpdate" value="<?php if (isset($_SESSION)) echo $_SESSION['lastNameUpdate'] ?>" />
                     </label>
                 </fieldset>
                 <!-- FIELD 2 -->
@@ -47,7 +48,7 @@
                     <!-- EMAIL -->
                     <label for="emailUpdate" class="employee-update__label">
                         <span>Email:</span>
-                        <input type="email" class="employee-update__input" name="emailUpdate" id="emailUpdate" value="<?= $_SESSION['emailUpdate'] ?>" />
+                        <input type="email" class="employee-update__input" name="emailUpdate" id="emailUpdate" value="<?php if (isset($_SESSION)) echo $_SESSION['emailUpdate'] ?>" />
                     </label>
                     <!-- GENDER -->
                     <label for="" class="employee-update__label">
@@ -73,12 +74,12 @@
                     <!-- CITY -->
                     <label for="cityUpdate" class="employee-update__label">
                         <span>City</span>
-                        <input type="text" class="employee-update__input" name="cityUpdate" id="cityUpdate" value="<?= $_SESSION['cityUpdate'] ?>" />
+                        <input type="text" class="employee-update__input" name="cityUpdate" id="cityUpdate" value="<?php if (isset($_SESSION)) echo $_SESSION['cityUpdate'] ?>" />
                     </label>
                     <!-- STREET ADDRESS -->
                     <label for="streetUpdate" class="employee-update__label">
                         <span>Street</span>
-                        <input type="text" class="employee-update__input" name="streetUpdate" id="streetUpdate" value="<?= $_SESSION['streetUpdate'] ?>" />
+                        <input type="text" class="employee-update__input" name="streetUpdate" id="streetUpdate" value="<?php if (isset($_SESSION)) echo $_SESSION['streetUpdate'] ?>" />
                     </label>
                 </fieldset>
                 <!-- FIELDSET 4 -->
@@ -86,12 +87,12 @@
                     <!-- STATE -->
                     <label for="stateUpdate" class="employee-update__label">
                         <span>State:</span>
-                        <input type="text" class="employee-update__input" name="stateUpdate" id="stateUpdate" value="<?= $_SESSION['stateUpdate'] ?>" />
+                        <input type="text" class="employee-update__input" name="stateUpdate" id="stateUpdate" value="<?php if (isset($_SESSION)) echo $_SESSION['stateUpdate'] ?>" />
                     </label>
                     <!-- AGE -->
                     <label for="ageUpdate" class="employee-update__label">
                         <span>Age:</span>
-                        <input type="number" class="employee-update__input" name="ageUpdate" id="ageUpdate" Value="<?= $_SESSION['ageUpdate'] ?>" />
+                        <input type="number" class="employee-update__input" name="ageUpdate" id="ageUpdate" Value="<?php if (isset($_SESSION)) echo $_SESSION['ageUpdate'] ?>" />
                     </label>
                 </fieldset>
                 <!-- FIELDSET 5 -->
@@ -99,18 +100,25 @@
                     <!-- POSTAL CODE -->
                     <label for="postalUpdate" class="employee-update__label">
                         <span>Postal code:</span>
-                        <input type="number" class="employee-update__input" name="postalUpdate" id="postalUpdate" Value="<?= $_SESSION['postalUpdate'] ?>" />
+                        <input type="number" class="employee-update__input" name="postalUpdate" id="postalUpdate" Value="<?php if (isset($_SESSION)) echo $_SESSION['postalUpdate'] ?>" />
                     </label>
                     <!-- PHONE NUMBER -->
                     <label for="phoneUpdate" class="employee-update__label">
                         <span>Phone number:</span>
-                        <input type="text" class="employee-update__input" name="phoneUpdate" id="phoneUpdate" value="<?= $_SESSION['phoneUpdate'] ?>" />
+                        <input type="text" class="employee-update__input" name="phoneUpdate" id="phoneUpdate" value="<?php if (isset($_SESSION)) echo $_SESSION['phoneUpdate'] ?>" />
                     </label>
                 </fieldset>
                 <!-- FIELDSET 6 -->
                 <fieldset class="employee-update__fieldset update-container__btn">
                     <!-- SEND DATA TO UPDATE -->
-                    <a href="../src/dashboard.php"><button class="primary-btn create__btn__update" name="function" value="create">Send</button></a>
+                    <?php
+                    if (isset($_SESSION)) {
+                        echo "<a href='../src/dashboard.php'><button class='primary-btn create__btn__update' name='function' value='create'>Send</button></a>";
+                    } else {
+                        echo "  <a href='../src/dashboard.php'><button class='primary-btn create__btn__update' name='function' value='create'>Send</button></a>";
+                    }
+                    ?>
+
                 </fieldset>
             </form>
             <!-- RETURN TO DASHBOARD -->

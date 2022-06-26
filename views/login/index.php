@@ -32,14 +32,14 @@
                 <h1>LOGIN</h1>
                 <p>Welcome back! Please enter your details</p>
             </div>
-            <form class="login-content__form" action="./src/library/loginController.php" method="POST">
+            <form class="login-content__form" action="./main/auth" method="POST">
                 <label class="login-content__label" for="">
                     <span class="login-content__span"> 📧 Email :</span>
-                    <input class="login-content__input" type="email" name="email">
+                    <input class="login-content__input" type="email" name="email" required>
                 </label>
                 <label class="login-content__label" for="">
                     <span class="login-content__span">🔑 Password :</span>
-                    <input class="login-content__input" type="password" name="password"></label>
+                    <input class="login-content__input" type="password" name="password" required></label>
                 <div class="login-content__btn">
                     <button type="submit" name="login" class="primary-btn">Login</button>
                 </div>

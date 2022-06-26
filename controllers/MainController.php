@@ -12,7 +12,7 @@ class MainController extends Controller
 
         $this->view->render('login/index');
     }
-    function auth()
+    function authMain()
     {
         $this->model->autenticate();
     }
