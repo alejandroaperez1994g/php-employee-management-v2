@@ -1,5 +1,8 @@
 <?php
 
+include_once ENTITIES . "/Employees.php";
+
+
 class FormController extends Controller
 {
     function __construct()
@@ -12,15 +15,35 @@ class FormController extends Controller
         $this->view->render('form/index');
     }
 
-    public function insertForm()
+    public function createForm()
     {
-        // $this->model->insert();
-        echo "insert nuevo trabajador";
+        $result = $this->model->insert($_POST);
+
+        if($result == "OK"){
+            $this->view->message = "User created Successfully!";
+        }else{
+            $this->view->message = "User creation failed!";
+        }
+        $this->view->render('form/index');
     }
 
-    public function updateForm()
+    public function detailForm($param)
     {
-        // $this->model->update();
-        echo "update nuevo trabajador";
+        $content = $this->model->getEmployeeById($param[0]);
+        $this->view->employee=$content;
+        $this->view->render('form/index');
+
+    }
+
+    public function updateForm($param){
+        // var_dump($_POST);
+        $result = $this->model->updateEmployee($_POST, $param[0]);
+
+        if($result == "OK"){
+            $this->view->message = "User updated Successfully!";
+        }else{
+            $this->view->message = "User update failed!";
+        }
+        $this->view->render('form/index');
     }
 }

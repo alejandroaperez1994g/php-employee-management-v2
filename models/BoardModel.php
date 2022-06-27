@@ -38,38 +38,6 @@ class BoardModel extends Model
         }
     }
 
-
-    public function getEmployeeById($id)
-    {
-        $items = [];
-        try {
-            $query = $this->db->connect()->query("SELECT * FROM employees WHERE employee_id = {$id};");
-            while ($row = $query->fetch()) {
-                $item = new Employees();
-
-                $item->id = $row['employee_id'];
-                $item->name = $row['name'];
-                $item->last_name = $row['last_name'];
-                $item->email = $row['email'];
-                $item->gender = $row['gender'];
-                $item->age = $row['age'];
-                $item->streetAddress = $row['streetAddress'];
-                $item->city = $row['city'];
-                $item->state = $row['state'];
-                $item->postalCode = $row['postalCode'];
-                $item->phoneNumber = $row['phoneNumber'];
-                array_push($items, $item);
-            }
-
-            return $items;
-        } catch (PDOException $e) {
-            echo $e;
-        }
-    }
-
-
-
-
     public function delete($id)
     {
         try {
