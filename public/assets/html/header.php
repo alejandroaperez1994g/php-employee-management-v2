@@ -23,7 +23,7 @@
             </div>
             <!-- NAV LOGOUT -->
             <div class="nav__logout">
-                <a class="navbar-brand nav-link" href="<?php echo BASE_URL ?>"><button class="nav__logout-btn primary-btn">Logout</button></a>
+                <a class="navbar-brand nav-link" href="./logout"><button class="nav__logout-btn primary-btn">Logout</button></a>
             </div>
         </nav>
     </header>

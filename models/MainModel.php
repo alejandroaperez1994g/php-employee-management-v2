@@ -1,4 +1,7 @@
 <?php
+
+include_once ENTITIES . "/Users.php";
+
 class MainModel extends Model
 {
 
@@ -9,6 +12,23 @@ class MainModel extends Model
 
     public function autenticate()
     {
-        echo "insert nuevo trabajador";
+        
+        $items = [];
+        try {
+            $query = $this->db->connect()->query("SELECT * FROM users;");
+            while ($row = $query->fetch()) {
+                $item = new Users();
+
+                $item->email = $row['email'];
+                $item->password = $row['password'];
+                
+                array_push($items, $item);
+            }
+
+            return $items;
+        } catch (PDOException $e) {
+            echo $e;
+        }
+
     }
 }
