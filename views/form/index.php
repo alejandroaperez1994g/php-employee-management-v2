@@ -30,7 +30,7 @@
 
         <section class="employee-form">
 
-            <form action= <?php if (isset($this->employee)) {
+            <form action=<?php if (isset($this->employee)) {
                                 echo "../update/{$this->employee[0]->id}";
                             } else {
                                 echo "./create";
@@ -137,7 +137,7 @@
                 </fieldset>
             </form>
             <!-- RETURN TO DASHBOARD -->
-            <a href="../board/consult"><button class="return__btn">🔙</button></a>
+            <a href="<?php echo BASE_URL . "board/consult" ?>"><button class="return__btn">🔙</button></a>
     </main>
 </body>
 

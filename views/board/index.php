@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(!isset($_SESSION['email'])){
+if (!isset($_SESSION['email'])) {
     header("Location:" . BASE_URL);
 }
 
@@ -60,7 +60,7 @@ if(!isset($_SESSION['email'])){
                             "
 
                             <tr class='table-employee__body-row' data-id='{$values->id}'>
-                                    <td class='table-employee__body-col'> <a href='../form/render/{$values->id}' >{$values->name}</a>  </td>
+                                    <td class='table-employee__body-col'> <a href='../form/detail/{$values->id}' >{$values->name}</a>  </td>
                                     <td class='table-employee__body-col'>{$values->last_name}</td>
                                     <td class='table-employee__body-col'>{$values->email}</td>
                                     <td class='table-employee__body-col'>{$values->age}</td>
